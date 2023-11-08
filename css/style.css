@@ -22,7 +22,7 @@
     height: 100px;
 }
 
-button {
+.header_button {
     padding: 0.5rem 2rem;
     border-radius: 0.4rem;
     display: inline-block;
@@ -38,7 +38,7 @@ button {
     align-items: center;
 }
 
-button:hover {
+.header_button:hover {
     background-color: black;
 }
 
@@ -107,6 +107,14 @@ main {
     left: 50%;
     transform: translate(-50%, -50%);
     z-index: 999;
+}
+
+.position_button {
+    top: 150%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 999;
+    position: absolute;
 }
 
 

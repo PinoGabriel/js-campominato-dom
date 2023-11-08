@@ -10,12 +10,18 @@ let cellaFortunata;
 const gameOver = document.getElementById("gameOver");
 
 let bombe = [];
+let giocoChiuso = false;
 
 
 /*********** INIZIO GIOCO *********/
 
 play.addEventListener("click", function () {
     containerMain.innerHTML = ""
+    gameOver.classList.remove("d-visible");
+    gameOver.classList.add("d-none");
+    giocoChiuso = false;
+    console.log(giocoChiuso);
+    bombe = []
 
     if (level.value == "easy") {
         console.log("selezionato easy");
@@ -45,14 +51,20 @@ function generaGriglia(numeroCelle, className, bombe) {
         div.innerHTML = i;
 
         div.addEventListener("click", function () {
-            console.log(i);
-            div.classList.toggle("square_bg");
+            
+            if (!giocoChiuso) {
+                console.log(i);
+                div.classList.toggle("square_bg");
 
-            if (bombe.includes(i)) {
-                div.classList.remove("square_bg")
-                div.classList.add("bg_red")
-                gameOver.classList.remove("d-none")
-                gameOver.classList.add("d-visible")                
+
+                if (bombe.includes(i)) {
+                    div.classList.remove("square_bg")
+                    div.classList.add("bg_red")
+                    gameOver.classList.remove("d-none")
+                    gameOver.classList.add("d-visible")
+                    giocoChiuso = true;     
+                    console.log(giocoChiuso);        
+                }
             }
             
         });
@@ -69,12 +81,12 @@ function getRndInteger(min, max) {
 
 /*********** FUNZIONE CILCO BOMBE *********/
 function bombeFino(numeroCasualeBombe) {
-    for (let i = 1; i < 16; i++) {
+    for (let i = 1; i < 17; i++) {
         let bombeCasuali = getRndInteger(1, numeroCasualeBombe);
     
         bombe.push(bombeCasuali)
         
     }
     
-    }
+}
   

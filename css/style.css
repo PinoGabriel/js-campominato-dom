@@ -109,12 +109,25 @@ main {
     z-index: 999;
 }
 
-.position_button {
+.playAgain_button {
     top: 150%;
     left: 50%;
     transform: translate(-50%, -50%);
     z-index: 999;
     position: absolute;
+    padding: 2rem 2rem;
+    border-radius: 2rem;
+    font-size: 2rem;
+    display: inline-block;
+    background-color: red;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.playAgain_button:hover {
+    background-color: black;
 }
 
 

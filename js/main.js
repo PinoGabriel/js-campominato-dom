@@ -12,6 +12,8 @@ const gameOver = document.getElementById("gameOver");
 let bombe = [];
 let giocoChiuso = false;
 
+let playAgain = document.getElementById("playAgain");
+
 
 /*********** INIZIO GIOCO *********/
 
@@ -90,3 +92,14 @@ function bombeFino(numeroCasualeBombe) {
     
 }
   
+
+/*********** PULSANTE PLAY AGAIN *********/
+
+playAgain.addEventListener("click", function () {
+    containerMain.innerHTML = "" 
+    gameOver.classList.remove("d-visible");
+    gameOver.classList.add("d-none");
+    giocoChiuso = false;
+    console.log(giocoChiuso);
+    bombe = []
+})

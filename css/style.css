@@ -1,0 +1,103 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+.red {
+    color: red;
+}
+
+
+/************ INIZIO HEADER *********************/
+:root {
+    --height-hf: 80px
+}
+
+.container_header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2rem 2rem;
+    height: 100px;
+}
+
+button {
+    padding: 0.5rem 2rem;
+    border-radius: 0.4rem;
+    display: inline-block;
+    background-color: #3498db;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.left_side {
+    display: flex;
+    align-items: center;
+}
+
+button:hover {
+    background-color: black;
+}
+
+.logo {
+    width: 50px;
+}
+
+/************ INIZIO MAIN *********************/
+
+main {
+    background-color: #7FFFD4;
+    padding: 5rem 0;
+}
+
+#container_main {
+    display: flex;
+    flex-wrap: wrap;
+    width: 600px;
+    height: 600px;
+    margin: 0 auto;
+}
+
+.square_easy {
+    border: 1px solid black;
+    width: calc(100% / 10);
+    height: calc(100% / 10);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.square_medium {
+    border: 1px solid black;
+    width: calc(100% / 9);
+    height: calc(100% / 9);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.square_hard {
+    border: 1px solid black;
+    width: calc(100% / 7);
+    height: calc(100% / 7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.square_bg {
+   background-color: cyan; 
+}
+
+
+/************ INIZIO FOOTER *********************/
+
+footer {
+    height: 100px;
+    display: flex;
+    align-items: center;
+    padding: 0 2rem;
+}
